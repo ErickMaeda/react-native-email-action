@@ -3,3 +3,8 @@ A simple and customized way to open email linking (Best option for iOS that will
 
 ## Demo (iOS)
 ![Alt Text](https://s1.ezgif.com/save/ezgif-1-d5012557a602.gif)
+
+## How to
+```
+npm install --save react-native-email-action
+```
