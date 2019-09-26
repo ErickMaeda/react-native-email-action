@@ -2,7 +2,7 @@
 A simple and customized way to open email linking (Best option for iOS that will ask you what email provider you can use)
 
 ## Demo (iOS)
-![Alt Text](https://github.com/ErickMaeda/react-native-email-action/blob/master/example/ezgif.com-gif-maker.gif)
+![Alt Text](https://raw.githubusercontent.com/ErickMaeda/react-native-email-action/master/example/ezgif.com-gif-maker.gif)
 
 ## How to
 ```
