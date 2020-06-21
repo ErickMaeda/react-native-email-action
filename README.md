@@ -9,7 +9,11 @@ A simple and customized way to open email linking (Best option for iOS that will
 
 ## Installation
 ```console
-foo@bar:~$ npm install --save react-native-email-action
+npm install --save react-native-email-action
+```
+or
+```console
+yarn add react-native-email-action
 ```
 ### iOS Only 
 After iOS 9+, you need to add this information keys on Info.plist
