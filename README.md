@@ -8,11 +8,11 @@ A simple and customized way to open email linking (Best option for iOS that will
 ![Alt Text](https://raw.githubusercontent.com/ErickMaeda/react-native-email-action/master/example/ezgif.com-gif-maker.gif)
 
 ## Installation
-```console
+```
 npm install --save react-native-email-action
 ```
 or
-```console
+```
 yarn add react-native-email-action
 ```
 ### iOS Only 
