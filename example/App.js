@@ -1,24 +1,34 @@
 import React from 'react';
-import { View, StatusBar, SafeAreaView, TouchableOpacity, StyleSheet, Text } from 'react-native';
-import { sendEmail } from 'react-native-email-action';
+import {
+  View,
+  StatusBar,
+  SafeAreaView,
+  TouchableOpacity,
+  StyleSheet,
+  Text,
+} from 'react-native';
+import {sendEmail} from 'react-native-email-action';
 
 const App = () => {
+  const openEmailOptions = () => {
+    sendEmail({
+      to: 'test@gmail.com',
+      subject: 'Subject Test',
+      body: 'Email Body',
+      cc: ['cc@test.com', 'cc2@test.com'],
+      bcc: ['bcc@test.com', 'bcc2@test.com'],
+    })
+      .then((link) => console.log('On open!', link))
+      .catch((error) => console.log('Something went wrong!', error.message));
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <TouchableOpacity
           style={styles.containerButton}
-          onPress={() => {
-            sendEmail({
-              to: "test@gmai.com",
-              subject: "Subject Test",
-              body: "Email Body"
-            })
-              .then((link) => console.log("On open!", link))
-              .catch((error) => console.log("Something went wrong!", error.message));
-          }}
-        >
+          onPress={openEmailOptions}>
           <Text style={styles.textButton}>SEND EMAIL</Text>
         </TouchableOpacity>
       </SafeAreaView>
@@ -31,7 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   containerButton: {
     marginRight: 40,
@@ -42,14 +52,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#fff'
+    borderColor: '#fff',
   },
   textButton: {
     color: '#fff',
     textAlign: 'center',
     paddingLeft: 10,
-    paddingRight: 10
-  }
+    paddingRight: 10,
+  },
 });
 
 export default App;
