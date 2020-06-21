@@ -34,15 +34,16 @@ sendMail(options);
 ```
 
 ## Available Options to sendMail
-```
-|  	|description  	|type  	|required  	|  	
-|-	|-	|-	|-	|
-|to  	|Email to destination  	|string  	|Y  	|  	
-|subject  	|Email Subject   	|string  	|Y 	|  	
-|body  	|Email Content  	|string  	|Y  	|  	
-|cc  	|Email CC  	|array  	|N  	|  	
-|bcc  	|Email BCC  	|array  	|N  	|
-```
+
+|  	|description  	|type  	|required  		
+|-	|-	|-	|-
+|to  	|Email to destination  	|string  	|Y  	
+|subject  	|Email Subject   	|string  	|Y 	
+|body  	|Email Content  	|string  	|Y  	
+|cc  	|Email CC  	|array  	|N  	
+|bcc  	|Email BCC  	|array  	|N  
+
+
 ## Available email app
 ### iOS (If installed)
 - Gmail 
