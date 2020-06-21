@@ -28,17 +28,27 @@ import { sendEmail } from 'react-native-email-action';
 const options = {
   to: "erick.maeda26@gmail.com", 
   subject: "Very important!", 
-  body: "Verify your email fast!"
+  body: "Verify your email fast!",
 };
 sendMail(options);
 ```
 
-### Available email app
-#### iOS (If installed)
+## Available Options to sendMail
+```
+|  	|description  	|type  	|required  	|  	
+|-	|-	|-	|-	|
+|to  	|Email to destination  	|string  	|Y  	|  	
+|subject  	|Email Subject   	|string  	|Y 	|  	
+|body  	|Email Content  	|string  	|Y  	|  	
+|cc  	|Email CC  	|array  	|N  	|  	
+|bcc  	|Email BCC  	|array  	|N  	|
+```
+## Available email app
+### iOS (If installed)
 - Gmail 
 - Outlook 
 - Mail
-#### Android
+### Android
 - All the apps installed.
 
 ## Roadmap
