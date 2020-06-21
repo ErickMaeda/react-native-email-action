@@ -14,7 +14,7 @@ const App = () => {
     sendEmail({
       to: 'test@gmail.com',
       subject: 'Subject Test',
-      body: 'Email Body',
+      body: "1st line.\n 2nd line.\n 3rd line.\n 4th line.",
       cc: ['cc@test.com', 'cc2@test.com'],
       bcc: ['bcc@test.com', 'bcc2@test.com'],
     })

@@ -9,6 +9,7 @@ export const sendEmail = ({
   bcc = [],
 }) =>
   new Promise(async (resolve, reject) => {
+    body = encodeURIComponent(body);
     let link = `mailto:${to}?subject=${subject}&body=${body}&cc=${cc.join(
       ","
     )}&bcc=${bcc.join(",")}`;
