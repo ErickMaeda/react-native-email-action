@@ -1,6 +1,6 @@
 {
   "name": "react-native-email-action",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "A simple and customized way to open email linking (Best option for iOS that will ask you what email provider you can use)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
