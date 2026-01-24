@@ -1,0 +1,9 @@
+node_modules/
+ios/
+android/
+Pods/
+vendor/
+dist/
+build/
+example/ios/
+example/android/

@@ -2,9 +2,19 @@
   "name": "react-native-email-action",
   "version": "1.0.6",
   "description": "A simple and customized way to open email linking (Best option for iOS that will ask you what email provider you can use)",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "packageManager": "yarn@1.22.22",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "yarn build && husky install",
+    "prepublishOnly": "yarn build",
+    "lint-staged": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -31,5 +41,27 @@
   "bugs": {
     "url": "https://github.com/ErickMaeda/react-native-email-action/issues"
   },
-  "homepage": "https://github.com/ErickMaeda/react-native-email-action#readme"
+  "homepage": "https://github.com/ErickMaeda/react-native-email-action#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@typescript-eslint/eslint-plugin": "^8.53.1",
+    "@typescript-eslint/parser": "^8.53.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-native": "^5.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix"
+    ],
+    "**/*.{ts,tsx,js,jsx,json,md}": [
+      "prettier --write"
+    ]
+  }
 }
