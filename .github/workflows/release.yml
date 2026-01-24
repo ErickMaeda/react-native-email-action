@@ -48,21 +48,6 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
 
-      - name: Create GitHub Release
-        if: steps.changesets.outputs.published == 'true'
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ fromJson(steps.changesets.outputs.publishedPackages)[0].version }}
-          release_name: v${{ fromJson(steps.changesets.outputs.publishedPackages)[0].version }}
-          body: |
-            Release v${{ fromJson(steps.changesets.outputs.publishedPackages)[0].version }}
-            
-            Published to npm: https://www.npmjs.com/package/react-native-email-action
-          draft: false
-          prerelease: false
-
       - name: Check published version
         if: steps.changesets.outputs.published == 'true'
         run: npm view react-native-email-action version
