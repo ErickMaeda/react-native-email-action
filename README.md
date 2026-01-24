@@ -11,13 +11,9 @@ A simple and customized way to open email linking (Best option for iOS that will
 
 ## Installation
 
-```
+```bash
 yarn add react-native-email-action
 ```
-
-yarn add react-native-email-action
-
-````
 
 ### iOS Only
 
@@ -30,7 +26,7 @@ After iOS 9+, you need to add this information keys on Info.plist
   <string>ms-outlook</string>
   <string>googlegmail</string>
 </array>
-````
+```
 
 ## Usage
 
@@ -107,38 +103,18 @@ After iOS 9+, you need to add the URL schemes for the email apps you want to sup
   <string>googlegmail</string>
   <string>readdle-spark</string>
   <string>airmail</string>
-// Basic usage
-await sendEmail({
-  to: "user@example.com",
-  subject: "Very important!",
-  body: "Verify your email fast!",
-});
+</array>
+```
 
-// Advanced usage (optional fields)
-await sendEmail({
-  to: "team@example.com",
-  subject: "Status Update",
-  body: "Here is the latest…",
-  cc: ["mgr@example.com"],
-  bcc: ["audit@example.com"],
-  cancelText: "Close",
-  // On iOS, restrict choices to specific apps for this call
-  appIds: ["gmail", "outlook", "spark"],
-});
-
-## Available Options to sendEmail
-|cc   	|Email CC   	|array<string>   	|N
-|bcc   	|Email BCC   	|array<string>   	|N
-|cancelText   	|Text for iOS action sheet cancel button   	|string   	|N
-|appIds   	|Override list of email apps to offer on iOS (e.g., ["mail","gmail"])   	|array<string>   	|N
-
-Returns a Promise that resolves with the URL used to open the email app.
 ## Roadmap
 
 ## API
+
 - **sendEmail(options)**: Opens the email composer. On iOS, shows an action sheet listing available apps based on `configureEmailApps()` or `options.appIds`.
 - **configureEmailApps(appIds)**: Sets the default list of email apps to check on iOS. Use app IDs from the list below.
 - ~~Add other app emails for iOS~~ ✅ Done! (configurable)
 - Add attachment option
+
+```
 
 ```
