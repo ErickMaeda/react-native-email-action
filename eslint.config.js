@@ -27,6 +27,21 @@ module.exports = [
     languageOptions: {
       parser: tsParser,
       parserOptions: { ecmaVersion: 2020, sourceType: 'module' },
+      globals: {
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        test: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': tseslint,

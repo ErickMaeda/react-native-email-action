@@ -8,5 +8,8 @@ node_modules
 # Runtime data
 tmp
 
+# Test coverage
+coverage
+
 # Examples (If applicable to your project)
 examples

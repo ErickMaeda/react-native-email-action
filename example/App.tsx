@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
 import {
   Alert,
-  SafeAreaView,
   StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { sendEmail } from 'react-native-email-action';
 
 const emailPayload = {
