@@ -1,7 +1,7 @@
 # React Native Email Action
 
-[![npm version](https://badge.fury.io/js/react-native-email-action.svg)](https://badge.fury.io/js/react-native-email-action)
-[![Downloads](http://img.shields.io/npm/dy/react-native-email-action.svg?style=flat-square)](https://img.shields.io/npm/dy/react-native-email-action)
+[![npm version](https://img.shields.io/npm/v/react-native-email-action)](https://www.npmjs.com/package/react-native-email-action)
+[![Downloads](https://img.shields.io/npm/dy/react-native-email-action.svg?style=flat-square)](https://www.npmjs.com/package/react-native-email-action)
 
 A simple and customized way to open email linking (Best option for iOS that will ask you what email app you can use, if installed)
 
